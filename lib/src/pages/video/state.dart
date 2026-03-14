@@ -4,50 +4,11 @@ class VideoState extends State<Video> {
   late VideoPlayerController vcontroller;
   late bool controlVisible;
   Timer? timer;
-  Timer? _introTimeout;
-  bool _playingIntro = true;
 
   @override
   void initState() {
-    controlVisible = false; // Hide controls during intro
-    vcontroller = VideoPlayerController.asset('assets/video/promo.mp4')
-      ..initialize().then((_) {
-        if (!mounted) return;
-        vcontroller.setVolume(0.0); // Mute for intro autoplay
-        setState(() {});
-        vcontroller.play();
-      });
-
-    vcontroller.addListener(_introListener);
+    controlVisible = true;
     
-    // Safety timeout for intro: 5 seconds max
-    _introTimeout = Timer(Duration(seconds: 5), () {
-      if (_playingIntro) _startMainVideo();
-    });
-
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
-      statusBarColor: Colors.transparent,
-    ));
-    super.initState();
-  }
-
-  void _introListener() {
-    if (_playingIntro && vcontroller.value.position >= vcontroller.value.duration && vcontroller.value.duration != Duration.zero) {
-      _startMainVideo();
-    }
-  }
-
-  void _startMainVideo() {
-    if (!mounted) return;
-    _introTimeout?.cancel();
-    vcontroller.removeListener(_introListener);
-    vcontroller.dispose();
-    
-    setState(() {
-      _playingIntro = false;
-      controlVisible = true;
-    });
-
     if (widget.videoUrl.startsWith('http')) {
       vcontroller = VideoPlayerController.network(widget.videoUrl);
     } else {
@@ -61,11 +22,15 @@ class VideoState extends State<Video> {
       vcontroller.play();
       autoHide();
     });
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Colors.transparent,
+    ));
+    super.initState();
   }
 
   @override
   void dispose() {
-    _introTimeout?.cancel();
     vcontroller.dispose();
     timer?.cancel();
     SystemChrome.setPreferredOrientations([
