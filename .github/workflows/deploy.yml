@@ -23,7 +23,7 @@ jobs:
         run: flutter pub get
 
       - name: Build Web
-        run: flutter build web --release --base-href "/netflix-clone/" --web-renderer html
+        run: flutter build web --release --base-href "/${{ github.event.repository.name }}/" --web-renderer html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
