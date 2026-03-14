@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master # Or main, depending on your branch name
+      - master
 
 jobs:
   build:
@@ -14,11 +14,13 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          flutter-version: '3.19.0' # Specify a stable version
           
+      - name: Install dependencies
+        run: flutter pub get
+
       - name: Build Web
-        run: |
-          flutter pub get
-          flutter build web --release --base-href "/${{ github.event.repository.name }}/" --web-renderer html
+        run: flutter build web --release --base-href "/netflix-clone/" --web-renderer html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
