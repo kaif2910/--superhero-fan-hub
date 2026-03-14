@@ -775,7 +775,7 @@ class _HeroVideoState extends State<HeroVideo> {
   @override
   Widget build(BuildContext context) {
     if (!_controller.value.isInitialized) {
-      return mediaImage('assets/images/1.jpg', fit: BoxFit.cover);
+      return mediaImage('assets/images/end_game.jpg', fit: BoxFit.cover);
     }
     return FittedBox(
       fit: BoxFit.cover,
