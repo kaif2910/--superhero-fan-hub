@@ -28,7 +28,7 @@ Map<String, dynamic> tvShow = {
         "season": 1,
         "number": 1,
         "runtime": 180,
-        "image": "https://image.tmdb.org/t/p/w500/or06vS3STuS5jB0bpZp7M60Y1Ie.jpg",
+        "image": "assets/images/end_game.jpg",
         "summary": "The heroes reunite to decide the fate of the universe."
       }
     ],
@@ -37,7 +37,7 @@ Map<String, dynamic> tvShow = {
   },
   "id": 101,
   "name": "Avengers: Endgame",
-  "image": "https://image.tmdb.org/t/p/w500/or06vS3STuS5jB0bpZp7M60Y1Ie.jpg",
-  "backdrop": "https://image.tmdb.org/t/p/w1280/7Ry6SZdHYw7Xv7zWmgYp64fz4I8.jpg",
-  "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  "image": "assets/images/end_game.jpg",
+  "backdrop": "assets/images/end_game.jpg",
+  "videoUrl": "assets/video/end_game.mp4"
 };

@@ -1,6 +1,52 @@
 part of netflix;
 
-class HomeState extends State<Home> with SingleTickerProviderStateMixin {
+class SplashState extends State<Home> {
+  late VideoPlayerController _controller;
+  bool _initialized = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = VideoPlayerController.asset('assets/video/netflix_intro.mp4')
+      ..initialize().then((_) {
+        setState(() {
+          _initialized = true;
+        });
+        _controller.play();
+      });
+
+    _controller.addListener(() {
+      if (_controller.value.position >= _controller.value.duration) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => MainHome(title: widget.title)),
+        );
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: _initialized
+            ? AspectRatio(
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
+              )
+            : Container(),
+      ),
+    );
+  }
+}
+
+class HomeState extends State<MainHome> with SingleTickerProviderStateMixin {
   late TabController controller;
 
   @override

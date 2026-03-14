@@ -4,20 +4,51 @@ class VideoState extends State<Video> {
   late VideoPlayerController vcontroller;
   late bool controlVisible;
   Timer? timer;
+  bool _playingIntro = true;
 
   @override
   void initState() {
-    controlVisible = true;
-    if (widget.videoUrl.startsWith('http')) {
-      vcontroller = VideoPlayerController.network(widget.videoUrl);
-    } else {
-      vcontroller = VideoPlayerController.asset(widget.videoUrl.isNotEmpty ? widget.videoUrl : 'assets/video/promo.mp4');
-    }
+    controlVisible = false; // Hide controls during intro
+    vcontroller = VideoPlayerController.asset('assets/video/netflix_intro.mp4')
+      ..initialize().then((_) {
+        setState(() {});
+        vcontroller.play();
+      });
+
+    vcontroller.addListener(_introListener);
+
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
       statusBarColor: Colors.transparent,
     ));
     super.initState();
-    autoHide();
+  }
+
+  void _introListener() {
+    if (_playingIntro && vcontroller.value.position >= vcontroller.value.duration) {
+      vcontroller.removeListener(_introListener);
+      _startMainVideo();
+    }
+  }
+
+  void _startMainVideo() {
+    vcontroller.dispose();
+    setState(() {
+      _playingIntro = false;
+      controlVisible = true;
+    });
+
+    if (widget.videoUrl.startsWith('http')) {
+      vcontroller = VideoPlayerController.network(widget.videoUrl);
+    } else {
+      vcontroller = VideoPlayerController.asset(
+          widget.videoUrl.isNotEmpty ? widget.videoUrl : 'assets/video/promo.mp4');
+    }
+
+    vcontroller.initialize().then((_) {
+      setState(() {});
+      vcontroller.play();
+      autoHide();
+    });
   }
 
   @override

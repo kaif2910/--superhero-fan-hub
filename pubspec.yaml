@@ -22,6 +22,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+   - assets/images/
+   - assets/video/
    - assets/images/1.jpg
    - assets/images/2.jpg
    - assets/images/3.jpg
@@ -34,6 +36,15 @@ flutter:
    - assets/images/4.0x/netflix_icon.png
    - assets/images/user.png
    - assets/video/promo.mp4
+   - assets/video/netflix_intro.mp4
+   - assets/video/end_game.mp4
+   - assets/video/iron_man.mp4
+   - assets/video/no_way_home.mp4
+   - assets/video/love_and_thunder.mp4
+   - assets/images/end_game.jpg
+   - assets/images/iron_man.jpg
+   - assets/images/no_way_home.jpg
+   - assets/images/love_and_thunder.jpg
    - screenshots/
   fonts:
     - family: GoogleSans

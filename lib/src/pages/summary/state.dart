@@ -329,8 +329,8 @@ class SummaryState extends State<Summary> {
     });
   }
 
-  List<Widget> renderMainGenres() {
-    List<Widget> genres = List<Widget>.from(tvShow['details']['genres'].map((g) {
+  List<Widget> renderMainGenres(Result show) {
+    List<Widget> genres = List<Widget>.from(show.genres.map((g) {
       return Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.0),
         child: Text(
@@ -672,7 +672,7 @@ class SummaryState extends State<Summary> {
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: renderMainGenres(),
+                                  children: renderMainGenres(show),
                                 ),
                                 Container(
                                   padding: EdgeInsets.symmetric(vertical: 16.0),
@@ -775,7 +775,7 @@ class _HeroVideoState extends State<HeroVideo> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/video/promo.mp4');
+    _controller = VideoPlayerController.asset('assets/video/end_game.mp4');
     _controller.setLooping(true);
     _controller.setVolume(0.0);
     _controller.initialize().then((_) {

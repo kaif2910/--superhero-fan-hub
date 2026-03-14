@@ -63,29 +63,29 @@ class MovieApiProvider {
       {
         'id': 101,
         'name': 'Avengers: Endgame',
-        'poster': 'https://image.tmdb.org/t/p/w500/or06vS3STuS5jB0bpZp7M60Y1Ie.jpg',
-        'videoUrl': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        'poster': 'assets/images/end_game.jpg',
+        'videoUrl': 'assets/video/end_game.mp4',
         'description': 'After the devastating events of Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to restore balance to the universe.'
       },
       {
         'id': 102,
         'name': 'Iron Man',
-        'poster': 'https://image.tmdb.org/t/p/w500/7WsyChvgyno907Jpht6OqSzw7vL.jpg',
-        'videoUrl': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        'poster': 'assets/images/iron_man.jpg',
+        'videoUrl': 'assets/video/iron_man.mp4',
         'description': 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.'
       },
       {
         'id': 103,
         'name': 'Spider-Man: No Way Home',
-        'poster': 'https://image.tmdb.org/t/p/w500/1g0dhYtWybi9U9YvksZgoGvUo0G.jpg',
-        'videoUrl': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        'poster': 'assets/images/no_way_home.jpg',
+        'videoUrl': 'assets/video/no_way_home.mp4',
         'description': 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.'
       },
       {
         'id': 104,
         'name': 'Thor: Love and Thunder',
-        'poster': 'https://image.tmdb.org/t/p/w500/pIkRyV18pEcbi0vYvthE0B9SJxW.jpg',
-        'videoUrl': 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+        'poster': 'assets/images/love_and_thunder.jpg',
+        'videoUrl': 'assets/video/love_and_thunder.mp4',
         'description': 'Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.'
       },
     ];
