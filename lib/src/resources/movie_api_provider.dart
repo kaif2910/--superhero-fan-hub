@@ -27,6 +27,15 @@ class MovieApiProvider {
 
   Future<Result> fetchOne(int id) async {
     if (_useMock) {
+      final items = _mockHomeData();
+      for (var section in items) {
+        final List marvelItems = section['items'];
+        for (var item in marvelItems) {
+          if (item['id'] == id) {
+            return Result.fromJson(item);
+          }
+        }
+      }
       return Result.fromJson(tvShow);
     }
 

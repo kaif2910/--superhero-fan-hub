@@ -24,12 +24,12 @@ Map<String, dynamic> tvShow = {
     "episodes": [
       {
         "id": 1,
-        "name": "The Snap",
+        "name": "Full Movie Trailer",
         "season": 1,
         "number": 1,
         "runtime": 180,
         "image": "assets/images/end_game.jpg",
-        "summary": "The heroes reunite to decide the fate of the universe."
+        "summary": "Watch the official trailer for this Marvel blockbuster."
       }
     ],
     "year": "2019-04-26",
