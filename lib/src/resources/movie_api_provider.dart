@@ -55,81 +55,44 @@ class MovieApiProvider {
   }
 
   List<Map<String, dynamic>> _mockHomeData() {
-    Map<String, dynamic> buildMarvelShow(int id, String name, String poster, String videoUrl, String description) {
-      // Create a DEEP COPY of the template to avoid data bleeding between movies
-      final clone = json.decode(json.encode(tvShow)); 
-      
-      clone['id'] = id;
-      clone['name'] = name;
-      clone['image'] = poster;
-      clone['backdrop'] = poster;
-      clone['videoUrl'] = videoUrl;
-      clone['year'] = '2022-01-01';
-      
-      // Ensure details is treated as its own unique object
-      clone['details']['description'] = description;
-      clone['details']['genres'] = ['Action', 'Sci-Fi', 'Marvel'];
-      
-      // Update episode info specifically for this movie
-      clone['details']['episodes'] = [
-        {
-          "id": id,
-          "name": name,
-          "season": 1,
-          "number": 1,
-          "runtime": 150,
-          "image": poster,
-          "summary": description
+    Map<String, dynamic> createMovie(int id, String name, String poster, String video, String desc) {
+      return {
+        "id": id,
+        "name": name,
+        "image": poster,
+        "backdrop": poster,
+        "videoUrl": video,
+        "year": "2022-01-01",
+        "details": {
+          "genres": ["Action", "Marvel", "Sci-Fi"],
+          "description": desc,
+          "cast": [{"person": {"name": "Marvel Star"}}],
+          "episodes": [
+            {
+              "id": id,
+              "name": "Official Trailer",
+              "season": 1,
+              "number": 1,
+              "runtime": 150,
+              "image": poster,
+              "summary": "Watch the official trailer for $name."
+            }
+          ]
         }
-      ];
-      return clone;
+      };
     }
 
-    final marvelMovies = [
-      {
-        'id': 101,
-        'name': 'Avengers: Endgame',
-        'poster': 'assets/images/end_game.jpg',
-        'videoUrl': 'assets/video/end_game.mp4',
-        'description': 'After the devastating events of Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to restore balance to the universe.'
-      },
-      {
-        'id': 102,
-        'name': 'Iron Man',
-        'poster': 'assets/images/iron_man.jpg',
-        'videoUrl': 'assets/video/iron_man.mp4',
-        'description': 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.'
-      },
-      {
-        'id': 103,
-        'name': 'Spider-Man: No Way Home',
-        'poster': 'assets/images/no_way_home.jpg',
-        'videoUrl': 'assets/video/no_way_home.mp4',
-        'description': 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.'
-      },
-      {
-        'id': 104,
-        'name': 'Thor: Love and Thunder',
-        'poster': 'assets/images/love_and_thunder.jpg',
-        'videoUrl': 'assets/video/love_and_thunder.mp4',
-        'description': 'Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.'
-      },
-    ];
+    final endgame = createMovie(101, 'Avengers: Endgame', 'assets/images/end_game.jpg', 'assets/video/end_game.mp4', 'After the devastating events of Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to restore balance to the universe.');
+    final ironman = createMovie(102, 'Iron Man', 'assets/images/iron_man.jpg', 'assets/video/iron_man.mp4', 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.');
+    final spiderman = createMovie(103, 'Spider-Man: No Way Home', 'assets/images/no_way_home.jpg', 'assets/video/no_way_home.mp4', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.');
+    final thor = createMovie(104, 'Thor: Love and Thunder', 'assets/images/love_and_thunder.jpg', 'assets/video/love_and_thunder.mp4', 'Thor enlists the help of Valkyrie, Korg and ex-girlfriend Jane Foster to fight Gorr the God Butcher, who intends to make the gods extinct.');
 
-    final marvelItems = marvelMovies.map((m) {
-      return buildMarvelShow(
-        m['id'] as int,
-        m['name'] as String,
-        m['poster'] as String,
-        m['videoUrl'] as String,
-        m['description'] as String,
-      );
-    }).toList();
+    final marvelItems = [endgame, ironman, spiderman, thor];
 
     return [
       {'title': 'Marvel Cinematic Universe', 'items': marvelItems},
-      {'title': 'Trending Now', 'items': List.from(marvelItems.reversed)},
-      {'title': 'Action & Adventure', 'items': List.from(marvelItems.skip(1))},
+      {'title': 'Trending Now', 'items': [spiderman, endgame, thor, ironman]},
+      {'title': 'Action & Adventure', 'items': [ironman, thor, spiderman]},
     ];
   }
 }

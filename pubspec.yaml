@@ -24,10 +24,6 @@ flutter:
   assets:
    - assets/images/
    - assets/video/
-   - assets/images/1.jpg
-   - assets/images/2.jpg
-   - assets/images/3.jpg
-   - assets/images/default-image.png
    - assets/images/Netflix-logo.png
    - assets/images/netflix_icon.png
    - assets/images/1.5x/netflix_icon.png
