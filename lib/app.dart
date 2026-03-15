@@ -66,7 +66,7 @@ class MarvelCinema extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Marvel Cinema',
+      title: 'Hero Universe',
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,
