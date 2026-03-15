@@ -546,7 +546,7 @@ class SummaryState extends State<Summary> {
               'assets/images/iron_man.jpg',
               'assets/images/no_way_home.jpg',
               'assets/images/love_and_thunder.jpg',
-              'assets/images/Netflix-logo.png',
+              'assets/images/app_logo.png',
               'assets/images/user.png',
             ];
 
@@ -565,14 +565,14 @@ class SummaryState extends State<Summary> {
                 primary: true,
                 expandedHeight: screenSize.height * 0.62,
                 backgroundColor: Colors.black,
-                leading: Image.asset('assets/images/netflix_icon.png'),
+                leading: Image.asset('assets/images/app_icon.png'),
                 titleSpacing: 20.0,
                 title: widget.title == 'Home'
                     ? Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Image.asset(
-                            'assets/images/Netflix-logo.png',
+                            'assets/images/app_logo.png',
                             height: 22.0,
                           ),
                           Row(

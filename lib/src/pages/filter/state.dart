@@ -31,7 +31,7 @@ class FilterState extends State<Filter> {
           primary: true,
           expandedHeight: screenSize.height * 0.65,
           backgroundColor: Colors.black,
-          leading: Image.asset('assets/images/netflix_icon.png'),
+          leading: Image.asset('assets/images/app_icon.png'),
           // titleSpacing: 20.0,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.start,

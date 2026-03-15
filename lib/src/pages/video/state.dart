@@ -13,7 +13,7 @@ class VideoState extends State<Video> {
       vcontroller = VideoPlayerController.network(widget.videoUrl);
     } else {
       vcontroller = VideoPlayerController.asset(
-          widget.videoUrl.isNotEmpty ? widget.videoUrl : 'assets/video/promo.mp4');
+          widget.videoUrl.isNotEmpty ? widget.videoUrl : 'assets/video/app_intro.mp4');
     }
 
     vcontroller.initialize().then((_) {

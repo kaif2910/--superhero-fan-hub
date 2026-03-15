@@ -24,13 +24,13 @@ flutter:
   assets:
    - assets/images/
    - assets/video/
-   - assets/images/Netflix-logo.png
-   - assets/images/netflix_icon.png
-   - assets/images/1.5x/netflix_icon.png
-   - assets/images/2.0x/netflix_icon.png
-   - assets/images/3.0x/netflix_icon.png
-   - assets/images/4.0x/netflix_icon.png
-   - assets/video/promo.mp4
+   - assets/images/app_logo.png
+   - assets/images/app_icon.png
+   - assets/images/1.5x/app_icon.png
+   - assets/images/2.0x/app_icon.png
+   - assets/images/3.0x/app_icon.png
+   - assets/images/4.0x/app_icon.png
+   - assets/video/app_intro.mp4
    - assets/video/end_game.mp4
    - assets/video/iron_man.mp4
    - assets/video/no_way_home.mp4
