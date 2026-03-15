@@ -81272,7 +81272,7 @@ return new A.H1(A.b(["Series","Movies","My List"],s),A.ae(["details",A.ae(["genr
 A.H1.prototype={
 au(){this.a.toString
 this.aF()},
-H(a){var s,r,q=null,p=A.bx(a,q,t.w).w,o=A.wC("assets/images/netflix_icon.png",q,q,q),n=this.a.d,m=t.D
+H(a){var s,r,q=null,p=A.bx(a,q,t.w).w,o=A.wC("assets/images/app_icon.png",q,q,q),n=this.a.d,m=t.D
 n=A.d2(A.b([A.amM(A.km(A.bt(A.ir(n,"-"," "),q,q,q,q,A.bk(q,q,B.i,q,q,q,q,q,q,q,q,14,q,q,B.y,q,q,!0,q,q,q,q,q,q,q,q),q,q),new A.a_S(this),q),n)],m),B.E,B.H,B.z)
 s=A.n2(this.f.h(0,"image"),B.bn,q,q)
 r=A.b([0.1,0.6,1],t.v)
@@ -81288,7 +81288,7 @@ A.zt.prototype={
 au(){var s,r=this
 r.aF()
 r.f=A.bJ(A.bT(0,0,6),r.ga4r())
-s=A.anF("assets/video/promo.mp4")
+s=A.anF("assets/video/app_intro.mp4")
 s.ku(0).bz(new A.a98(r),t.P).lq(new A.a99(r))
 r.d=s
 s.M(0,new A.a9a(r))},
@@ -81520,7 +81520,7 @@ $0(){this.a.d.qz(0,B.LH)
 return null},
 $S:0}
 A.a9I.prototype={
-$2(a6,a7){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a=null,a0="My List",a1="assets/images/2.jpg",a2="assets/images/3.jpg",a3="assets/images/Netflix-logo.png",a4="assets/images/user.png",a5=a7.b
+$2(a6,a7){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a=null,a0="My List",a1="assets/images/2.jpg",a2="assets/images/3.jpg",a3="assets/images/app_logo.png",a4="assets/images/user.png",a5=a7.b
 if(a5!=null){s=this.a
 r=s.a3F(a5)
 q=r.length!==0?B.b.gK(r):A.asx(B.bg.fq(0,B.bg.n0($.aJ0)))
@@ -81542,7 +81542,7 @@ i=A.a8(new A.aZ(r,new A.a9E(s),a5),!0,a5.i("k.E"))
 if(i.length!==0)B.b.kv(o,0,A.asJ(i,s.gAz(),a0))}if(s.a.c==="Downloads"){o.push(s.w_("Smart Downloads","New episodes will be saved automatically for you.",B.Da))
 o.push(s.JY("Downloaded For You",A.b([a1,a2,"screenshots/flutter_04.png"],t.s)))}if(s.a.c==="More"){o.push(s.JZ("App Assets",A.b(["assets/images/1.jpg",a1,a2,"assets/images/end_game.jpg","assets/images/iron_man.jpg","assets/images/no_way_home.jpg","assets/images/love_and_thunder.jpg",a3,a4],t.s),120))
 o.push(s.w_("Profile","Switch profiles and manage your account settings.",B.Di))}a5=this.b
-n=A.wC("assets/images/netflix_icon.png",a,a,a)
+n=A.wC("assets/images/app_icon.png",a,a,a)
 m=s.a.c==="Home"?A.d2(A.b([A.wC(a3,a,22,a),A.d2(A.b([A.cO(B.D9,B.i,a,a),A.db(a,a,16),A.cO(B.f1,B.i,a,a),A.db(a,a,16),new A.FI(new A.pW(a4,a,a),12,a)],p),B.E,B.H,B.z)],p),B.E,B.jl,B.z):A.d2(A.b([s.Hq("Series","Series"),s.Hq("Movies","Movies"),s.Hq("My-list",a0)],p),B.E,B.jl,B.z)
 l=s.a.c==="Home"?new A.wv(a):A.n2(this.c,B.bn,a,a)
 k=A.b([0.1,0.6,1],t.v)
@@ -81623,7 +81623,7 @@ au(){var s,r=this
 r.e=!0
 s=r.a.d
 if(B.d.bV(s,"http"))s=r.d=new A.ms(s,B.lY,B.yj,$.al())
-else s=r.d=A.anF(s.length!==0?s:"assets/video/promo.mp4")
+else s=r.d=A.anF(s.length!==0?s:"assets/video/app_intro.mp4")
 s.ku(0).bz(new A.abZ(r),t.P)
 A.a9Y(B.xP.QT(B.D))
 r.aF()},
