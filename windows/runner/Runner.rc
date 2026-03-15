@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example.netflix" "\0"
-            VALUE "FileDescription", "netflix_clone" "\0"
+            VALUE "CompanyName", "com.kaif.superhero.fan.hub" "\0"
+            VALUE "FileDescription", "superhero_fan_hub" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "netflix_clone" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.example.netflix. All rights reserved." "\0"
-            VALUE "OriginalFilename", "netflix_clone.exe" "\0"
-            VALUE "ProductName", "netflix_clone" "\0"
+            VALUE "InternalName", "superhero_fan_hub" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 com.kaif.superhero.fan.hub. All rights reserved." "\0"
+            VALUE "OriginalFilename", "superhero_fan_hub.exe" "\0"
+            VALUE "ProductName", "superhero_fan_hub" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

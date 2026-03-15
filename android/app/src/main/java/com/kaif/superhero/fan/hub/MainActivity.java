@@ -1,4 +1,4 @@
-package com.example.netflixclone;
+package com.kaif.superhero.fan.hub;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
