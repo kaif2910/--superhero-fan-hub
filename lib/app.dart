@@ -66,7 +66,7 @@ class Netflix extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Netflix',
+      title: 'Marvel Cinema',
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,
